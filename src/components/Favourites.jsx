@@ -30,7 +30,6 @@ function Favourite() {
                 Start adding movies to your favourites list and they will appear
                 here
               </p>
-              <p>Adding a new p tag just for testing purposes.</p>
             </div>
           )}
         </section>
