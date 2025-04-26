@@ -64,28 +64,6 @@ npm run dev
 - **LocalStorage** – To persist favourites
 - **React Context API** – For global state management
 
-## 📁 Project Structure
-
-📦 cinefind/
-├── public/
-│ ├── hero-bg.png
-│ └── no-movie.png
-├── src/
-│ ├── components/
-│ │ ├── MovieCard.jsx
-│ │ ├── Search.jsx
-│ │ ├── Navbar.jsx
-│ │ └── Favourite.jsx
-│ ├── context/
-│ │ └── MovieContext.jsx
-│ ├── library/
-│ │ └── appwrite.js
-│ ├── styles/
-│ │ ├── App.css
-│ │ └── Moviecard.css
-│ ├── App.jsx
-│ └── main.jsx
-
 ## ✅ Future Improvements
 
 - 🔐 User authentication (Google OAuth)
