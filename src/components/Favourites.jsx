@@ -30,7 +30,6 @@ function Favourite() {
                 Start adding movies to your favourites list and they will appear
                 here
               </p>
-              <p>I love you Asifa ❤️</p>
             </div>
           )}
         </section>
