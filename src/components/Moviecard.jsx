@@ -1,4 +1,6 @@
+import * as React from "react";
 import { useMovieContext } from "../context/MovieContext";
+import AlertDialog from "./MovieModal";
 
 function Moviecard({ movie }) {
   const {
@@ -8,14 +10,18 @@ function Moviecard({ movie }) {
     title,
     vote_average,
     id,
+    overview,
+
   } = movie;
 
   const { addTofavourites, removeFromFavourite, isFavourite } =
     useMovieContext();
+  const [open, setOpen] = React.useState(false);
 
   const fav = isFavourite(id);
 
-  function handleFav() {
+  function handleFav(e) {
+    e.stopPropagation();
     if (fav) {
       removeFromFavourite(id);
     } else {
@@ -23,9 +29,13 @@ function Moviecard({ movie }) {
     }
   }
 
+  const handleClickOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
+
   return (
     <>
-      <div className="movie-card group">
+      <div className="movie-card group" onClick={handleClickOpen}>
         <div className=" relative">
           <img
             src={
@@ -61,6 +71,9 @@ function Moviecard({ movie }) {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <AlertDialog open={open} handleClose={handleClose} overView={overview}/>
     </>
   );
 }
