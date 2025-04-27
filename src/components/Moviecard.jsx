@@ -1,4 +1,3 @@
-import "../styles/App.css";
 import { useMovieContext } from "../context/MovieContext";
 
 function Moviecard({ movie }) {

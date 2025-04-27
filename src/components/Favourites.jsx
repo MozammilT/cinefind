@@ -1,4 +1,3 @@
-// import "../styles/Favourite.css";
 import Moviecard from "./Moviecard";
 import { useMovieContext } from "../context/MovieContext";
 

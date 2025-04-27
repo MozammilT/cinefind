@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useDebounce } from "react-use";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-// import "../styles/App.css";
 import Search from "./Search";
 import Moviecard from "./Moviecard";
 import { searchCount, getTrendingMovies } from "../library/appwrite";
@@ -63,7 +62,7 @@ function Home() {
       if (query && data.results.length > 0) {
         searchCount(query, data.results[0]);
       }
-      // console.log("API Data - ", data);
+      console.log("API Data - ", data);
     } catch (err) {
       console.log("Error fetching movies - ", err);
       setError("Error fetching movies, please try again later.");
