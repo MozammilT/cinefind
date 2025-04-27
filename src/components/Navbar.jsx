@@ -9,6 +9,7 @@ function Navbar() {
       <div className="flex justify-between">
         <div className="px-4 py-3 flex justify-start gap-6">
           <img src="/logo.png" className="w-10 h-8" />
+          <img src="/logo.png" className="w-10 h-8" />
           <h2 className="text-white text-3xl font-bold cursor-pointer">
             <span className="text-gradient">CineFind</span>
           </h2>
