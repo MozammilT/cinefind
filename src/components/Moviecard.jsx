@@ -73,7 +73,7 @@ function Moviecard({ movie }) {
       </div>
 
       {/* Modal */}
-      <AlertDialog open={open} handleClose={handleClose} overView={overview}/>
+      <AlertDialog open={open} handleClose={handleClose} movie={movie}/>
     </>
   );
 }

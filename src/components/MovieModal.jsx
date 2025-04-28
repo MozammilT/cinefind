@@ -4,28 +4,28 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 
-export default function AlertDialog({ open, handleClose, overview }) {
-    console.log(overview);
+export default function AlertDialog({ open, handleClose, movie }) {
+  if (!movie) return null;
+  const { title, overview } = movie;
+
   return (
     <Dialog
       open={open}
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
-      classname="bg-pink-500"
     >
-      <DialogTitle id="alert-dialog-title">
-        {"Use Google's location service?"}
-      </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          {overview}
+          <div>{title}</div>
+          <br />
+          <div> {overview}</div>
+          <br />
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose} autoFocus>
+        <Button onClick={handleClose}>
           Close
         </Button>
       </DialogActions>
