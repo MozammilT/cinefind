@@ -82,4 +82,3 @@ This project is open source and available under the MIT License.
 
 - Replace `"your_tmdb_api_key_here"` with your actual `.env` key instructions.
 - Replace `"Your Name"` and GitHub URL.
-- You can also add a live demo link if it's hosted.
