@@ -106,7 +106,7 @@
   }
 
   .movie-card {
-    @apply bg-dark-100 hover:bg-hoverDark transition-colors duration-300 p-5 rounded-2xl shadow-inner shadow-light-100/10;
+    @apply bg-dark-100 hover:bg-hoverDark transition-colors duration-300 p-5 rounded-2xl cursor-pointer shadow-inner shadow-light-100/10;
 
     & h3 {
       @apply text-white font-bold text-base line-clamp-1;

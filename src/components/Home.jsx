@@ -4,6 +4,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Search from "./Search";
 import Moviecard from "./Moviecard";
+// import AlertDialog from "./MovieModal";
 import { searchCount, getTrendingMovies } from "../library/appwrite";
 
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -98,7 +99,7 @@ function Home() {
       <div className="pattern" />
       <div className="wrapper">
         <header>
-          <img src="hero.png"/>
+          <img src="hero.png" />
           <h1>
             Find the <span className="text-gradient"> Movies </span> you'll
             Enjoy Without Hassle
