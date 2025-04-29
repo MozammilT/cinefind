@@ -68,7 +68,7 @@ npm run dev
 
 - 🔐 User authentication (Google OAuth)
 - 🧠 Smart recommendations
-- 👆 Click on any movie card to view its summary in a sleek modal popup.
+- 📟 Pagination to view more popular movies.
 
 ## 🧑‍💻 Author
 
