@@ -5,25 +5,25 @@ function Navbar() {
   const isHomePage = pathname === "/";
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 shadow-md backdrop-blur-sm border-b border-white/10">
-      <div className="flex justify-between">
-        <div className="px-4 py-3 flex justify-start gap-6">
-          <img src="/logo.png" className="w-10 h-8" />
-          <h2 className="text-white text-3xl font-bold cursor-pointer">
+    <nav className="nav-main">
+      <div className="navbar">
+        <div className="logo-content">
+          <img src="/logo.png" className="logo" />
+          <h2 className="logo-heading">
             <span className="text-gradient">CineFind</span>
           </h2>
         </div>
 
-        <div className="mt-1.5 mr-3 cursor-pointer">
+        <div className="nav-link-div">
           {isHomePage ? (
             <Link to="/favourites">
-              <p className="text-lg font-bold text-white mt-2 mr-1.5">
+              <p className="nav-link">
                 Favourites
               </p>
             </Link>
           ) : (
             <Link to="/">
-              <p className="text-lg font-bold text-white mt-2 mr-1.5 ">Home</p>
+              <p className="nav-link">Home</p>
             </Link>
           )}
         </div>

@@ -183,6 +183,34 @@
   .dialog-backdrop {
     @apply backdrop-blur-sm bg-black/30;
   }
+
+  .nav-main{
+    @apply fixed top-0 left-0 w-full z-50 shadow-md backdrop-blur-sm border-b border-white/10
+  }
+
+  .navbar{
+    @apply flex justify-between
+  }
+
+  .logo-content{
+    @apply px-4 py-3 flex justify-start gap-6
+  }
+
+  .logo{
+    @apply w-10 h-8
+  }
+
+  .logo-heading{
+    @apply text-white text-3xl font-bold cursor-pointer
+  }
+
+  .nav-link-div{
+    @apply mt-1.5 mr-3 cursor-pointer
+  }
+
+  .nav-link{
+    @apply text-lg font-bold text-white mt-2 mr-1.5
+  }
 }
 
 @utility text-gradient {
