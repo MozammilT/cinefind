@@ -29,7 +29,7 @@ export default function AlertDialog({ open, handleClose, movie }) {
           <div className="overview-title">{title}</div>
           <br />
           <div className="overview-detail">{overview}</div>
-          <br />
+          {/* <br /> */}
         </div>
       </DialogContent>
       <DialogActions className="dialog-action">
