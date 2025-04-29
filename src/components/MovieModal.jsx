@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 
 export default function AlertDialog({ open, handleClose, movie }) {
   if (!movie) return null;
@@ -15,19 +14,28 @@ export default function AlertDialog({ open, handleClose, movie }) {
       onClose={handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
+      slotProps={{
+        paper: {
+          sx: {
+            borderRadius: "1rem",
+            backgroundColor: "#0f0d23",
+          },
+        },
+        backdrop: { className: "dialog-backdrop" },
+      }}
     >
-      <DialogContent>
-        <DialogContentText id="alert-dialog-description">
-          <div>{title}</div>
+      <DialogContent className="dialog-content">
+        <div id="alert-dialog-description">
+          <div className="overview-title">{title}</div>
           <br />
-          <div> {overview}</div>
+          <div className="overview-detail">{overview}</div>
           <br />
-        </DialogContentText>
+        </div>
       </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose}>
+      <DialogActions className="dialog-action">
+        <button onClick={handleClose} className="close-btn">
           Close
-        </Button>
+        </button>
       </DialogActions>
     </Dialog>
   );

@@ -11,7 +11,6 @@ function Moviecard({ movie }) {
     vote_average,
     id,
     overview,
-
   } = movie;
 
   const { addTofavourites, removeFromFavourite, isFavourite } =
@@ -36,7 +35,7 @@ function Moviecard({ movie }) {
   return (
     <>
       <div className="movie-card group" onClick={handleClickOpen}>
-        <div className=" relative">
+        <div className="relative">
           <img
             src={
               poster_path
@@ -73,7 +72,7 @@ function Moviecard({ movie }) {
       </div>
 
       {/* Modal */}
-      <AlertDialog open={open} handleClose={handleClose} movie={movie}/>
+      <AlertDialog open={open} handleClose={handleClose} movie={movie} />
     </>
   );
 }
