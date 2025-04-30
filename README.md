@@ -2,8 +2,6 @@
 
 CineFind is a sleek movie discovery app built with React and Appwrite. Users can search for movies, view trending picks, and curate their personal list of favourite films—all in one place.
 
-![CineFind Banner](public/Screenshot.png)
-
 ---
 
 ## 🚀 Features
