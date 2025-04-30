@@ -17,9 +17,7 @@ function Navbar() {
         <div className="nav-link-div">
           {isHomePage ? (
             <Link to="/favourites">
-              <p className="nav-link">
-                Favourites
-              </p>
+              <p className="nav-link">Favourites</p>
             </Link>
           ) : (
             <Link to="/">

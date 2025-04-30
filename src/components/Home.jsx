@@ -4,7 +4,6 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Search from "./Search";
 import Moviecard from "./Moviecard";
-// import AlertDialog from "./MovieModal";
 import { searchCount, getTrendingMovies } from "../library/appwrite";
 
 const BASE_URL = "https://api.themoviedb.org/3";

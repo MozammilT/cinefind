@@ -10,7 +10,6 @@ function Moviecard({ movie }) {
     title,
     vote_average,
     id,
-    overview,
   } = movie;
 
   const { addTofavourites, removeFromFavourite, isFavourite } =
