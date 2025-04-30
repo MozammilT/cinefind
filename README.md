@@ -19,7 +19,7 @@ CineFind is a sleek movie discovery app built with React and Appwrite. Users can
 ## 🛠️ Tech Stack
 
 - **Frontend**: React, TailwindCSS, Vite
-- **Backend**: Appwrite (for trending movies and search counts)
+- **Backend**: Node.js & Appwrite
 - **API**: TMDB (TheMovieDB)
 - **State Management**: React Context API
 
@@ -30,7 +30,6 @@ CineFind is a sleek movie discovery app built with React and Appwrite. Users can
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/cinefind.git
 cd cinefind
 ```
 
@@ -57,7 +56,6 @@ npm run dev
 ## 🧰 Tech Stack
 
 - **React** – Frontend framework
-
 - **Tailwind CSS** – Utility-first CSS for styling
 - **TMDb API** – Movie data
 - **Appwrite** – For tracking search counts (optional module)
