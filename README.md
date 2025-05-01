@@ -66,6 +66,9 @@ npm run dev
 - 🧠 Smart recommendations
 - 📟 Pagination to view more popular movies.
 
+## 🚧 Deployment
+Deployment is not yet live, but planned for future release.
+
 ## 🧑‍💻 Author
 
 Built with ❤️ by [Mozammil Tarique](https://github.com/MozammilT)
