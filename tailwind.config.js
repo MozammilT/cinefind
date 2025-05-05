@@ -22,7 +22,7 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: false, // <- disables default light theme from daisyui (important for your project!!)
+    themes: false,
     base: false,
 },
 };
