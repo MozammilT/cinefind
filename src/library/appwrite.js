@@ -24,7 +24,6 @@ export const searchCount = async (searchTerm, movie) => {
     const result = await db.listDocuments(DATABASE_ID, COLLECTION_ID, [
       Query.equal("searchTerm", searchTerm),
     ]);
-    console.log(`list documents for ${movie.title} - `, result);
 
     //2. If exists then increase the count by 1
     if (result.documents.length > 0) {
@@ -43,7 +42,7 @@ export const searchCount = async (searchTerm, movie) => {
         movie_id: movie.id,
       });
     }
-  } catch (err) { 
+  } catch (err) {
     console.log(err);
   }
 };

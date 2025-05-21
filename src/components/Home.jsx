@@ -64,7 +64,6 @@ function Home() {
       if (query && data.results.length > 0) {
         searchCount(query, data.results[0]);
       }
-      console.log("API Data - ", data);
     } catch (err) {
       console.log("Error fetching movies - ", err);
       setError("Error fetching movies, please try again later.");
