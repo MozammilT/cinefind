@@ -17,6 +17,9 @@ export default function AlertDialog({ open, handleClose, movie }) {
           sx: {
             borderRadius: "1rem",
             backgroundColor: "#0f0d23",
+            maxWidth: "600px",
+            width: "90%",
+            mx: "auto",
           },
         },
         backdrop: { className: "dialog-backdrop" },
@@ -26,6 +29,7 @@ export default function AlertDialog({ open, handleClose, movie }) {
         <div id="alert-dialog-description">
           <div className="overview-title">{title}</div>
           <br />
+          <hr className="border-t border-white/20" />
           <div className="overview-detail">{overview}</div>
         </div>
       </DialogContent>

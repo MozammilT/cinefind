@@ -8,8 +8,8 @@ function Pagination({ currentPage, setCurrentPage }) {
   };
 
   return (
-    <div className="px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10">
-      <div className="flex items-center justify-between w-full max-w-80 text-gray-500 font-medium">
+    <div className="wrapper">
+      <div className="pagination">
         <button
           type="button"
           aria-label="prev"
@@ -19,14 +19,14 @@ function Pagination({ currentPage, setCurrentPage }) {
           <img src="page.svg" />
         </button>
 
-        <div className="flex items-center gap-2 text-sm font-medium">
+        <div className="pages">
           {pages.map((page) => (
             <button
               key={page}
               onClick={() => goToPage(page)}
               className={`h-10 w-10 flex items-center justify-center aspect-square ${
                 currentPage === page
-                  ? "text-white border border-indigo-200 rounded-full bg-white/20"
+                  ? "text-white border border-white-100 rounded-full bg-white/20"
                   : ""
               }`}
             >

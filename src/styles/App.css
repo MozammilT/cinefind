@@ -156,7 +156,7 @@
   }
 
   .dialog-content {
-    @apply bg-dark-100 overflow-hidden;
+    @apply bg-dark-100 overflow-hidden max-h-[60vh] overflow-y-auto;
   }
 
   .dialog-action {
@@ -167,11 +167,11 @@
   }
 
   .overview-title {
-    @apply text-3xl text-white;
+    @apply text-4xl font-bold text-white leading-tight;
   }
 
   .overview-detail {
-    @apply text-lg text-white;
+    @apply text-lg text-white pt-5;
   }
 
   .close-btn {
@@ -209,6 +209,16 @@
   .nav-link{
     @apply text-lg font-bold text-white mt-2 mr-1.5
   }
+
+  .pagination{
+    @apply flex items-center justify-between w-full max-w-80 text-gray-500 font-medium
+  }
+
+  .pages{
+    @apply flex items-center gap-2 text-sm font-medium
+  }
+
+
 }
 
 @utility text-gradient {
