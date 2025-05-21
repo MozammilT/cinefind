@@ -6,20 +6,21 @@ CineFind is a sleek movie discovery app built with React and Appwrite. Users can
 
 ## 🚀 Features
 
-- 🔍 Search for movies using TheMovieDB API
-- 🔥 View trending movies of the week
-- ❤️ Add or remove movies from your favourites list
-- 📦 Context-based state management
-- ⚡ Fast and responsive UI with TailwindCSS
+- 🔍 Search for movies using TheMovieDB API  
+- 🔥 View trending movies of the week  
+- ❤️ Add or remove movies from your favourites list  
+- 📦 Context-based state management  
+- ⚡ Fast and responsive UI with Tailwind CSS  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, TailwindCSS, Vite
-- **Backend**: Node.js & Appwrite
-- **API**: TMDB (TheMovieDB)
-- **State Management**: React Context API
+- **Frontend**: React, Tailwind CSS, Vite  
+- **Backend**: Node.js & Appwrite  
+- **API**: TMDB (TheMovieDB)  
+- **State Management**: React Context API  
+- **Storage**: LocalStorage (for favourites)  
 
 ---
 
@@ -28,9 +29,9 @@ CineFind is a sleek movie discovery app built with React and Appwrite. Users can
 ### 1. Clone the repo
 
 ```bash
+git clone https://github.com/your-username/cinefind
 cd cinefind
 ```
-
 ### 2. Install dependencies
 
 ```bash
@@ -51,23 +52,14 @@ VITE_API_KEY=your_tmdb_api_key_here
 npm run dev
 ```
 
-## 🧰 Tech Stack
-
-- **React** – Frontend framework
-- **Tailwind CSS** – Utility-first CSS for styling
-- **TMDb API** – Movie data
-- **Appwrite** – For tracking search counts (optional module)
-- **LocalStorage** – To persist favourites
-- **React Context API** – For global state management
-
-## ✅ Future Improvements
-
-- 🔐 User authentication (Google OAuth)
-- 🧠 Smart recommendations
-- 📟 Pagination to view more popular movies.
+## 📈 Roadmap
+- ✅ Pagination to view more popular movies
+- 🟡 A dedicated page for TV & Web Series
+- 📌 User authentication (Google OAuth)
+- 📌 Smart recommendations
 
 ## 🚧 Deployment
-Deployment is not yet live, but planned for future release.
+Deployment is not yet live, but planned for a future release.
 
 ## 🧑‍💻 Author
 
@@ -77,7 +69,12 @@ Built with ❤️ by [Mozammil Tarique](https://github.com/MozammilT)
 
 This project is open source and available under the MIT License.
 
-### 🛠 Notes for you:
+### 📝 Notes for you:
 
 - Replace `"your_tmdb_api_key_here"` with your actual `.env` key instructions.
 - Replace `"Your Name"` and GitHub URL.
+
+### 🔖 Roadmap Legend
+- ✅ Achieved
+- 🟡 In Progress
+- 📌 Planned
