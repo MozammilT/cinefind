@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Search from "./Search";
 import Moviecard from "./Moviecard";
 import { searchCount, getTrendingMovies } from "../library/appwrite";
+import Pagination from "./Pagination";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -18,6 +19,7 @@ const API_OPTIONS = {
 };
 
 function Home() {
+  const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState([]);
@@ -42,7 +44,7 @@ function Home() {
       setError("");
       const endPoint = query
         ? `${BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
-        : `${BASE_URL}/discover/movie?sort_by=popularity.desc`;
+        : `${BASE_URL}/discover/movie?sort_by=popularity.desc&page=${currentPage}`;
       const response = await fetch(endPoint, API_OPTIONS);
 
       if (!response.ok) {
@@ -86,8 +88,17 @@ function Home() {
   };
 
   useEffect(() => {
-    fetchMovies(debouncedSearchTerm);
+    setCurrentPage(1);
+    fetchMovies(debouncedSearchTerm, 1);
   }, [debouncedSearchTerm]);
+
+  useEffect(() => {
+    if (debouncedSearchTerm !== "") {
+      fetchMovies(debouncedSearchTerm, currentPage);
+    } else {
+      fetchMovies("", currentPage);
+    }
+  }, [currentPage]);
 
   useEffect(() => {
     fetchTrendingMovies();
@@ -143,6 +154,7 @@ function Home() {
             )}
           </ul>
         </section>
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
     </main>
   );
