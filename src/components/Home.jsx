@@ -20,6 +20,7 @@ const API_OPTIONS = {
 };
 
 function Home() {
+  const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState([]);
@@ -44,7 +45,7 @@ function Home() {
       setError("");
       const endPoint = query
         ? `${BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
-        : `${BASE_URL}/discover/movie?sort_by=popularity.desc&page=1`;
+        : `${BASE_URL}/discover/movie?sort_by=popularity.desc&page=${currentPage}`;
       const response = await fetch(endPoint, API_OPTIONS);
 
       if (!response.ok) {
@@ -88,8 +89,17 @@ function Home() {
   };
 
   useEffect(() => {
-    fetchMovies(debouncedSearchTerm);
+    setCurrentPage(1);
+    fetchMovies(debouncedSearchTerm, 1);
   }, [debouncedSearchTerm]);
+
+  useEffect(() => {
+    if (debouncedSearchTerm !== "") {
+      fetchMovies(debouncedSearchTerm, currentPage);
+    } else {
+      fetchMovies("", currentPage);
+    }
+  }, [currentPage]);
 
   useEffect(() => {
     fetchTrendingMovies();
@@ -145,7 +155,7 @@ function Home() {
             )}
           </ul>
         </section>
-        <Pagination />
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
     </main>
   );
