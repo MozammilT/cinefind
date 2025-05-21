@@ -6,6 +6,7 @@ import Search from "./Search";
 import Moviecard from "./Moviecard";
 // import AlertDialog from "./MovieModal";
 import { searchCount, getTrendingMovies } from "../library/appwrite";
+import Pagination from "./Pagination";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -43,7 +44,7 @@ function Home() {
       setError("");
       const endPoint = query
         ? `${BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
-        : `${BASE_URL}/discover/movie?sort_by=popularity.desc`;
+        : `${BASE_URL}/discover/movie?sort_by=popularity.desc&page=1`;
       const response = await fetch(endPoint, API_OPTIONS);
 
       if (!response.ok) {
@@ -144,6 +145,7 @@ function Home() {
             )}
           </ul>
         </section>
+        <Pagination />
       </div>
     </main>
   );
